@@ -80,6 +80,13 @@ void  printInt(int && i)
 {
     cout << "ÓÒÖµÒýÓÃ£º" << i << endl;
 }
+
+foo GetFoo()
+{
+    foo a;
+    return a;
+}
+
 void main()
 {
     right_value_ref2();
@@ -97,5 +104,15 @@ void main()
     bar1.print();
     cout << "bar" << endl;
     f1.print();
+
+    cout << "=====" << endl;
+     &foo();
+
+   // a->print();
+
+    cout << "=====" << endl;
+    foo* b = &GetFoo();
+    b->print();
+    std::cin.get();
     //system("pause");
 }
